@@ -48,6 +48,16 @@ bool dropPiece(int col, char piece) {
     }
     for (int i = ROWS - 1; i >= 0; i--) {
         if (board[i][col] == ' ') {
+            // animate piece falling from top to landing row
+            for (int r = 0; r <= i; r++) {
+                board[r][col] = piece;
+                system("cls");
+                printBoard();
+                Sleep(400);
+                if (r != i) {
+                    board[r][col] = ' ';
+                }
+            }
             board[i][col] = piece;
             return true;
         }
@@ -144,9 +154,9 @@ int main() {
                     gameOver = true;
                     break;
                 }
-                sleep(1);
+                Sleep(1000);
                 dropPiece(col, currentPlayer);
-                printf("AI (Player %c) chooses column: %d\n", currentPlayer, col);
+                printf("\nAI (Player %c) chooses column: %d", currentPlayer, col);
             }
 
             moves++;
