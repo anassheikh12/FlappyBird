@@ -44,6 +44,7 @@ void printBoard() {
 
 bool dropPiece(int col, char piece) {
     if (col < 0 || col >= COLS || board[0][col] != ' ') {
+        Beep(2000,1000);
         return false;
     }
     for (int i = ROWS - 1; i >= 0; i--) {
@@ -55,10 +56,12 @@ bool dropPiece(int col, char piece) {
                 printBoard();
                 Sleep(300);
                 if (r != i) {
+                    Beep(800,100);
                     board[r][col] = ' ';
                 }
             }
             board[i][col] = piece;
+            Beep(2000,1000);
             return true;
         }
     }
