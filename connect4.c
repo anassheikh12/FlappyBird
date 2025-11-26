@@ -53,7 +53,7 @@ bool dropPiece(int col, char piece) {
                 board[r][col] = piece;
                 system("cls");
                 printBoard();
-                Sleep(400);
+                Sleep(300);
                 if (r != i) {
                     board[r][col] = ' ';
                 }
