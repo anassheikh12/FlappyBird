@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#background {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+#bird {
+    position: fixed;
+    left: 20vw;
+    top: 20vh;
+    height: 4vw;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.obs {
+    display: inline-block;
+    position: fixed;
+    top: 0px;
+    width: 10vw;
+    left: 100vw;
+}
+
+span {
+    display: inline-block;
+    position: fixed;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    top: 5vh;
+    left: 47vw;
+    font-size: 15vh;
+    z-index: 10;
+}
