@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <time.h>
-#include<windows.h>
-
+#include <windows.h>
 
 #define ROWS 6
 #define COLS 7
